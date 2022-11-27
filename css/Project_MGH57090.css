@@ -1,1 +1,203 @@
 
+header{
+    background-image: url('../images/Untitled2.png');
+    height: 200px;
+    background-size: 100% 100%;    
+}
+nav{
+    background-color: aqua;
+    height: 15%;
+    font-style: italic;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li{
+    line-height: 1em;
+    text-align: center;
+    width: 20%; 
+    overflow: auto;
+    display: inline-block;
+}
+
+nav > ul > li >a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}
+
+
+*{
+    /* universal selector */
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.container {
+    border-left: 60px;
+    margin-left: 60px;
+}
+
+html{
+    background-color: lightgreen;
+}
+
+body{
+    background-image: url('../images/Untitled.png');
+    background-color: white;
+    width: 98%;
+    margin: 0 auto;
+    min-height: 500px;
+    border: 2px solid black;
+    background-repeat: repeat;
+
+}
+
+
+
+h1{
+    color: crimson;
+    padding: 80px;
+    opacity: 0.9;
+    font-size: xxx-large  ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+p{
+    color: rgb(24, 30, 28);
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+h2{
+    color: blue;
+    padding: 10px;
+    opacity: 0.9;
+    font-size: xxx-large  ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+h3{
+    color: rgb(243, 15, 15);
+   
+}
+figure img{
+    /* contextual selector: descendant selector. For img within figure */
+    border-radius: 20px;
+    width: 30%;
+}
+
+
+footer{
+    clear:both;
+    background-color: aquamarine;
+    display: flex;
+}
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#table1, div#table2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* mobile */
+@media only screen and (max-width: 480px){
+    form > fieldset{
+        flex: 1 1 250px;
+        max-width: 300px;
+    }
+    h1,h2{
+
+        font-size: medium;
+    }
+    nav{
+       
+        font-size: smaller;
+    
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 481px){
+    
+    form > fieldset{
+        flex: 1 1 250px;
+        max-width: 300px;
+    }
+    h1,h2{
+
+        font-size: x-large;
+    }
+    nav{
+       
+        font-size: smaller;
+    
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 769px){
+    form > fieldset{
+        flex: 1 1 500px;
+        max-width: 600px;
+    }
+    h1,h2{
+
+        font-size: xxx-large;
+    }
+    nav{
+       
+        font-size: large;
+    
+    }
+    
+}
+form {
+    display:flex;
+    flex-flow: row wrap;     
+}
+fieldset{
+    max-width: 90%;
+    background-color: aliceblue;
+    margin-left: 30%;
+}
+div{
+    display:flex;
+    flex-flow: row;                
+}
+div>*{
+    flex: 1 0 100px;
+    margin: 10px 10px;                
+}
+legend{
+    background-color: slategray;
+    padding: 8px;
+    border-radius: 0.5em;
+    color:whitesmoke;
+}
+div:last-child>*{
+    border-radius: 0.5em;
+}
+
+
+table{
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+img{
+    width: 400px;
+    height: 300px;
+}
