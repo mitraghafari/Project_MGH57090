@@ -1,4 +1,9 @@
-
+*{
+    /* universal selector */
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
 header{
     background-image: url('../images/Untitled2.png');
     height: 200px;
@@ -7,9 +12,10 @@ header{
 nav{
     background-color: aqua;
     height: 15%;
+    width: auto;
     font-style: italic;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
 
 }
 
@@ -20,7 +26,7 @@ nav ul{
 }
 
 nav > ul > li{
-    line-height: 1em;
+    line-height: 2em;
     text-align: center;
     width: 20%; 
     overflow: auto;
@@ -34,11 +40,10 @@ nav > ul > li >a{
 }
 
 
-*{
-    /* universal selector */
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+.messegeDiv{
+
+    color: red;
+
 }
 .container {
     border-left: 60px;
@@ -54,7 +59,7 @@ body{
     background-color: white;
     width: 98%;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 800px;
     border: 2px solid black;
     background-repeat: repeat;
 
@@ -72,13 +77,12 @@ h1{
 }
 p{
     color: rgb(24, 30, 28);
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 
 }
 h2{
     color: blue;
-    padding: 10px;
+    padding: 9px;
     opacity: 0.9;
     font-size: xxx-large  ;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -95,11 +99,13 @@ figure img{
 }
 
 
-footer{
-    clear:both;
-    background-color: aquamarine;
-    display: flex;
-}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    height: 20px;   /* Height of the footer */
+    background: #6cf;
+ }
 div {
     display: flex;
     align-items: center;
@@ -127,7 +133,7 @@ div#table1, div#table2{
     
     }
     p{
-        font-size:medium ;
+        font-size:small ;
     }
 }
 
@@ -148,7 +154,7 @@ div#table1, div#table2{
     
     }
     p{
-        font-size:x-large;
+        font-size:large;
     }
     
 }
@@ -161,7 +167,7 @@ div#table1, div#table2{
     }
     h1,h2{
 
-        font-size: xxx-large;
+        font-size: xx-large;
     }
     nav{
        
@@ -169,7 +175,7 @@ div#table1, div#table2{
     
     }
     p{
-        font-size:xxx-large ;
+        font-size:xx-large ;
     }
     
 }
@@ -201,13 +207,46 @@ div:last-child>*{
 }
 
 
-table{
+table {
+    border-collapse: separate;
+  }
+  
+  th {
+    background-color: #4287f5;
+    color: white;
+  }
+  
+  th,
+  td {
+    width: 150px;
+    text-align: center;
     border: 1px solid black;
     padding: 5px;
-    border-collapse: collapse;
-}
+  }
 
 img{
     width: 400px;
     height: 300px;
+}
+ input#email:focus:valid,
+ input#phone:focus:valid,
+ input#birthdate:focus:valid,
+ input#age:focus:valid,
+ input#firstName:focus:invalid,
+ input#lastName:focus:invalid
+ {
+     background: honeydew url('../images/rb_valid.png') bottom right/contain no-repeat;
+ }
+ 
+
+ input#email:focus:invalid,
+ input#phone:focus:invalid,
+ input#birthdate:focus:invalid,
+ input#age:focus:invalid,
+ input#firstName:focus:invalid,
+ input#lastName:focus:invalid
+
+
+ {
+    background: mistyrose url('../images/rb_invalid.png') bottom right/contain no-repeat;
 }

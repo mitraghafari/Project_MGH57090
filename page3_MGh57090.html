@@ -2,20 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="author" content="Bambang">
+        <meta name="author" content="Mitra">
         <title>make an appointment</title>       
         <link href="css/Project_MGH57090.css" rel="stylesheet">
-
+        <script src="script/Patient_MGh57090.js"></script>
+        <script src="script/Project_page3_MGh57090.js"></script>
+        <script src="script/Project_MGH57090.js"></script>
     </head>
-    <body>
+    <body >
         <header>
              
             <nav>
                 <ul>
                     <li><a href="index.html">home</a></li>
-                    <li><a href="page4_MGH57090.html">about</a></li>
-                    <li><a href="page2_MGH57090.html">docters</a></li>
+                    <li><a href="page2_MGH57090.html">about</a></li>
                     <li><a href="page3_MGh57090.html" >make an appointment</a></li>
+                    <li><a href="page4_MGH57090.html">Report</a></li>
+
                 </ul>
             </nav>
             <h1 > health center</h1>
@@ -24,9 +27,13 @@
         <br>	
         <div>
         <article>
-            <form  >
+            <section id="formSection">
+                <form name="form" action='page4_MGh57090.html' method="post">
+          
                 <fieldset id="field1"  class="user/-inout_box" >
-                    <legend>patient information</legend>
+                    <div id="messegeDiv"></div>
+
+                    <legend>Patient information</legend>
                     
                     <div>
                         <label for="firstName">first Name</label>
@@ -34,41 +41,40 @@
                         placeholder="Mitra" required>
                     </div>
                     <div>
-                        <label for="lastName">Last Name</label>
+                        <label for="lastName">last Name</label>
                         <input type="text" name="lastName" id="lastName" 
                         placeholder="Ghafari" required>
                     </div>
                     <div>
-                        <label for="age">age</label>
-                        <input type="int" name="age" id="age" 
-                         required>
+                        <label for="age">Age</label>
+                        <input type="text" name="age"    id="age" placeholder="1 to 100" required>
                     </div>
                     <div>
-                        <label for="birthdate">Date   </label>
+                        <label for="birthdate">Birth Date   </label>
                         <input type="date" name="birthdate" id="birthdate" required>
                     </div>
                     <div>
-                        <label for="studentName">student Name</label>
-                        <input type="text" name="studentName" id="studentName" 
-                        placeholder="mitra ghafari" required>
+                        <label for="gender">gender</label>
+                        <select name="gender" id="gender" required>
+                            
+                        </select>
                     </div>
                     <div>
-                        <label for="patientMobile">student Id</label>
-                        <input type="text" name="patientMobile" id="patientMobile" 
-                        placeholder="6723456789" pattern="\d{10}" required>
+                        <label for="phone">Mobile</label>
+                        <input type="text" name="phone" id="phone" 
+                        placeholder="(001)-672-3456"  required>
                     </div>
                     <div>
-                        <label for="patientEmail">student Email</label>
-                        <input type="text" name="patientEmail" id="patientEmail" 
+                        <label for="email"> Email</label>
+                        <input type="text" name="email" id="email" 
                         placeholder="mitra@dougluscolledge" required>
                     </div>
-                    <div>
-                        <textarea name="detail" >
-                        </textarea>
-                    </div>
+                    
                     <div>
                         <br>
-                        <input type="submit" name="submit" value="Submit Data" >
+                        <input type="button" name="submit" id="myBttn" value="Submit">    
+                        <input type="reset" name="clear" id="clear" value="Clear">    
+
                     </div>
 
                 </fieldset>
@@ -77,9 +83,9 @@
                 
               
             </form>
+            </section>
         </article>
     </div>
-        <br><br><br>
         <footer >
             <hr>
             <small >
